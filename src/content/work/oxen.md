@@ -59,5 +59,5 @@ images:
     class: col-span-1 sm:col-span-6 lg:col-span-4 lg:row-start-3 lg:col-start-9 lg:row-span-2
 url:
   prev: logos
-  next: mod
+  next: ntr
 ---

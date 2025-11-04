@@ -55,6 +55,6 @@ images:
     next: "01"
     class: col-span-1 sm:col-span-6 md:col-span-4 lg:col-span-4
 url:
-  prev: mod
+  prev: ntr
   next: print
 ---

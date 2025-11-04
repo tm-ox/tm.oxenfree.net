@@ -55,7 +55,7 @@ images:
     next: "01"
     class: col-span-2 sm:col-span-12 lg:col-span-7
 url:
-  prev: vm
+  prev: fredst
   next: logos
 ---
 
