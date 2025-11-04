@@ -40,7 +40,7 @@ images:
     alt: Catalogue
     prev: "04"
     id: "05"
-    next: "06"
+    next: "01"
     class: col-span-2 sm:col-span-6 md:col-span-6 lg:col-span-6
 url:
   prev: oxen
