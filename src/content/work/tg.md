@@ -10,7 +10,7 @@ tools:
     name: Figma
     link: https://figma.com
 description: UI design for corporate behaviour management platform TripleGoal, designed in Figma.
-cover: { src: ./tg/tg-gm-m-assessments.png, alt: TripleGoal Platform UI }
+cover: { src: ./tg/tg-gm-login.png, alt: TripleGoal Platform UI }
 images:
   - src: ./tg/tg-gm-login.png
     alt: Desktop - Login

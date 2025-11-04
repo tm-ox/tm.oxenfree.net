@@ -22,7 +22,7 @@ tools:
     name: NetlifyCMS
     link: https://v1.netlifycms.org
 description: Website for Australian landscape architecture firm.
-cover: { src: ./fredst/fredst-web-company-2.png, alt: Fred St. Website }
+cover: { src: ./fredst/fredst-web-projects-2.png, alt: Fred St. Website }
 images:
   - src: ./fredst/fredst-web-company-2.png
     alt: Home

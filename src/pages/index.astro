@@ -16,93 +16,107 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 ---
 
 <Layout title={data.title} description={data.description}>
-  <!-- HI -->
-  <section id="home">
-    <p class="section-title">{data.sections[0]}</p>
-    <Fade origin="sm:origin-top-left my-auto">
-      <a href="/#work" class="hover:text-primary">
-        <Content />
-      </a>
-      <h3>{data.subhead1}</h3>
-      <h2 class="font-bold uppercase">{data.sub1}</h2>
-      <div class="flex my-2 mx-auto sm:ml-0">
-        {
-          page.data.sub1skills.flatMap((skills1: any) => (
-            <a href={skills1.link} target="_blank" class="justify-center">
-              <Image
-                src={skills1.icon}
-                alt={skills1.name}
-                class="my-auto mr-3 w-auto h-3 rounded-none"
-              />
+    <!-- HI -->
+    <section id="home">
+        <p class="section-title">{data.sections[0]}</p>
+        <Fade origin="sm:origin-top-left my-auto">
+            <a href="/#work" class="hover:text-primary">
+                <Content />
             </a>
-          ))
-        }
-      </div>
-      <h3>{data.subhead2}</h3>
-      <h2 class="font-bold uppercase">{data.sub2}</h2>
-      <div class="flex mt-2 mx-auto sm:ml-0">
-        {
-          page.data.sub2skills.flatMap((skills2: any) => (
-            <a href={skills2.link} target="_blank" class="justify-center">
-              <Image
-                src={skills2.icon}
-                alt={skills2.name}
-                class="my-auto mr-3 w-auto h-3 rounded-none"
-              />
+            <h3>{data.subhead1}</h3>
+            <h2 class="font-bold uppercase">{data.sub1}</h2>
+            <div class="flex my-2 mx-auto sm:ml-0">
+                {
+                    page.data.sub1skills.flatMap((skills1: any) => (
+                        <a
+                            href={skills1.link}
+                            target="_blank"
+                            class="justify-center"
+                        >
+                            <Image
+                                src={skills1.icon}
+                                alt={skills1.name}
+                                class="my-auto mr-3 w-auto h-3 rounded-none"
+                            />
+                        </a>
+                    ))
+                }
+            </div>
+            <h3>{data.subhead2}</h3>
+            <h2 class="font-bold uppercase">{data.sub2}</h2>
+            <div class="flex mt-2 mx-auto sm:ml-0">
+                {
+                    page.data.sub2skills.flatMap((skills2: any) => (
+                        <a
+                            href={skills2.link}
+                            target="_blank"
+                            class="justify-center"
+                        >
+                            <Image
+                                src={skills2.icon}
+                                alt={skills2.name}
+                                class="my-auto mr-3 w-auto h-3 rounded-none"
+                            />
+                        </a>
+                    ))
+                }
+            </div>
+            <a href="/#work">
+                <Icon
+                    name="ion:md-arrow-dropdown-circle"
+                    class="mt-10 icon arrow"
+                />
             </a>
-          ))
-        }
-      </div>
-      <a href="/#work">
-        <Icon name="ion:md-arrow-dropdown-circle" class="mt-10 icon arrow" />
-      </a>
-    </Fade>
-  </section>
-  <!-- WORK -->
-  <TabNav class="sticky top-6" />
-  <section id="work">
-    <p class="section-title">{data.sections[1]}</p>
-    <a href="/#home">
-      <Icon name="ion:md-arrow-dropup-circle" class="mb-5 icon arrow" />
-    </a>
-    <div
-      class="grid grid-cols-2 gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 lg:gap-4"
-    >
-      {
-        work.map((work) => (
-          <Fade>
-            <a
-              href={`/work/${work.slug}`}
-              class="rounded-md shadow-md hover:scale-[0.98] ease-out duration-[1000ms] transition-all"
-            >
-              <Image
-                src={work.data.cover.src}
-                alt={work.data.cover.alt}
-                class="object-none rounded-b-none bg-secondary aspect-square sm:aspect-video lg:aspect-square"
-              />
-              <div class="box">
-                <strong>{work.data.client}</strong>
-                {work.data.type}
-              </div>
-            </a>
-          </Fade>
-        ))
-      }
-    </div>
-    <a href="/#contact" class="mb-auto">
-      <Icon name="ion:md-arrow-dropdown-circle" class="mt-10 icon arrow" />
-    </a>
-  </section>
-  <!-- CONTACT -->
-  <section id="contact" class="relative">
-    <p class="section-title">{data.sections[2]}</p>
-    <a href="/#work">
-      <Icon name="ion:md-arrow-dropup-circle" class="mb-5 icon arrow" />
-    </a>
-    <div class="mb-auto">
-      <Fade>
-        <Contact />
-      </Fade>
-    </div>
-  </section>
+        </Fade>
+    </section>
+    <!-- WORK -->
+    <TabNav class="sticky top-6" />
+    <section id="work">
+        <p class="section-title">{data.sections[1]}</p>
+        <a href="/#home">
+            <Icon name="ion:md-arrow-dropup-circle" class="mb-5 icon arrow" />
+        </a>
+        <div
+            class="grid grid-cols-2 gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 lg:gap-4"
+        >
+            {
+                work.map((work) => (
+                    <Fade>
+                        <a
+                            href={`/work/${work.slug}`}
+                            class="rounded-md shadow-md hover:scale-[0.98] ease-out duration-[1000ms] transition-all"
+                        >
+                            <Image
+                                src={work.data.cover.src}
+                                alt={work.data.cover.alt}
+                                class="object-none rounded-b-none bg-secondary aspect-square sm:aspect-video lg:aspect-square"
+                            />
+                            <div class="box">
+                                <strong>{work.data.client}</strong>
+                                {work.data.type}
+                            </div>
+                        </a>
+                    </Fade>
+                ))
+            }
+        </div>
+        <a href="/#contact" class="mb-auto">
+            <Icon
+                name="ion:md-arrow-dropdown-circle"
+                class="mt-10 icon arrow"
+            />
+        </a>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="relative">
+        <p class="section-title">{data.sections[2]}</p>
+        <a href="/#work">
+            <Icon name="ion:md-arrow-dropup-circle" class="mb-5 icon arrow" />
+        </a>
+        <div class="mb-auto">
+            <Fade>
+                <Contact />
+            </Fade>
+        </div>
+    </section>
 </Layout>
